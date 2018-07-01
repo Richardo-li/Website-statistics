@@ -44,10 +44,12 @@
       cursor: pointer;
       user-select: none;
     }
+
     #app>div:active {
       background: rgb(53, 45, 165);
     }
-    #app>span{
+
+    #app>span {
       position: relative;
       top: 15px;
     }
@@ -77,35 +79,35 @@
 
 </html>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script>
 
-window.onload=()=>{
-  let vm = new Vue({
-    el: '#app',
-    data() {
-      return {
-        account: 0
+  window.onload = () => {
+    let vm = new Vue({
+      el: '#app',
+      data() {
+        return {
+          account: 0
+        }
+
+      },
+      methods: {
+
+      },
+      filters: {
+
+      },
+      watch: {
+
+      },
+      computed: {
+
+      },
+      mounted() {
+
       }
-
-    },
-    methods: {
-
-    },
-    filters: {
-
-    },
-    watch: {
-
-    },
-    computed: {
-
-    },
-    mounted() {
-
-    }
-  })
-}
+    })
+  }
 </script>
