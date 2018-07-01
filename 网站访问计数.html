@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>这是vue模板哈</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background: rgb(26, 113, 172);
+      color: white;
+    }
+
+    #app {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 500px;
+      width: 500px;
+      background: #000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #app>div {
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background: rgb(104, 156, 190);
+      color: white;
+      float: left;
+      margin-right: 50px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #app>div:active {
+      background: rgb(53, 45, 165);
+    }
+    #app>span{
+      position: relative;
+      top: 15px;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+
+
+    <div class="btn1" @click='account++'>加1</div>
+    <div class="btn2" @click='account--'>减1</div>
+
+    <span>{{account}}</span>
+
+
+
+  </div>
+</body>
+
+<span id="busuanzi_container_site_pv">本站总访问量
+  <span id="busuanzi_value_site_pv"></span>次</span>
+
+</html>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>
+
+  let vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        account: 0
+      }
+
+    },
+    methods: {
+
+    },
+    filters: {
+
+    },
+    watch: {
+
+    },
+    computed: {
+
+    },
+    mounted() {
+
+    }
+  })
+</script>
